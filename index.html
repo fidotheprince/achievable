@@ -6,11 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+
     <ul>
-        <li id="showTime">0 : 0 : 0</li>
+        <li id="showTime">min: sec: </li>
     </ul>
+
     <button id="startButton" onclick="start()">Start</button>
     <button id="stopButton" onclick="stop()">Stop</button>
+    <button id="saveButton" onclick="save()">Save</button>
+    <br><br>
+    <div id="results"></div>
 </body>
 </html>
 
@@ -24,5 +29,6 @@
     }
 
 </style>
+
 
 <script type="text/javascript" src="logic.js"></script>
