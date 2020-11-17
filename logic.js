@@ -55,6 +55,8 @@ function save() {
     document.getElementById("results").innerHTML = "Total Time: " + addedMinutes + " : " + addedSeconds;
     console.log(addedMinutes, addedSeconds);
 
+    window.location.reload();
+
 }
 
 /* say congradulations you are one step closer to your goal å */
