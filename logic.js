@@ -1,7 +1,9 @@
 //variables with set interval function need to be global
 let totalSeconds = 0;
 let totalMinutes = 0;
-let runningTimer;
+let timeValues = [];
+let valArr = [];
+
 
 //hide stop & save button on initital page load
 document.getElementById('stopButton').style.display = "none";
@@ -20,15 +22,14 @@ function timer() {
     document.getElementById("showTime").innerHTML = 
     "min: " + totalMinutes + " sec: " + totalSeconds;
 
-    let timeValues = [totalMinutes, totalSeconds];
+    timeValues.push(totalMinutes);
 
-    return timeValues;
 }
 
 //start timer display stop button, hide save button
 function start() {
 
-    runningTimer = window.setInterval(timer, 1);
+    runningTimer = window.setInterval(timer, 1000);
     document.getElementById('saveButton').style.display = "none";
     document.getElementById('startButton').style.display = "none";
     document.getElementById('stopButton').style.display = "inline";
@@ -43,20 +44,21 @@ function stop(){
     document.getElementById('stopButton').style.display = "none";
     document.getElementById('startButton').style.display = "inline";
 
+
 }
 
-//clear visual time, save current time
+
 function save() {
+    let dispVal = timeValues.pop();   
 
-    let savedValues = timer();
-    let addedMinutes = savedValues[0];
-    let addedSeconds = savedValues[1];
+    let li = document.createElement("li");
+    let textNode = document.createTextNode(dispVal);
+    li.appendChild(textNode);
 
-    document.getElementById("results").innerHTML = "Total Time: " + addedMinutes + " : " + addedSeconds;
-    console.log(addedMinutes, addedSeconds);
+    document.getElementById("results").appendChild(li);
 
-    window.location.reload();
-
+    //have item popped be dynamically be rendered in a td tag
+    //display total time 
 }
 
-/* say congradulations you are one step closer to your goal å */
+/* say congradulations you are one step closer to your goal  */

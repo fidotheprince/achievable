@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Achievable</title>
 </head>
 <body>
 
@@ -15,7 +15,10 @@
     <button id="stopButton" onclick="stop()">Stop</button>
     <button id="saveButton" onclick="save()">Save</button>
     <br><br>
-    <div id="results"></div>
+
+    <ul id="results"></ul>
+  
+
 </body>
 </html>
 
@@ -23,10 +26,39 @@
 
     li {
         list-style: none;
-        display:inline;
-        font-size: 50px;
+        font-size: 20px;
+    }
+
+    #showTime {
+        list-style: none;
+        font-size: 30px;
         font-family: 'Courier New', Courier, monospace;
     }
+
+    button {
+        border: none;
+        background-color: cadetblue;
+        color: white;
+        padding: 10px;
+        border-radius: 2px;
+  
+    }
+
+    #stopButton {
+        background-color:crimson;
+    }
+
+    #stopButton:hover {
+        background-color:darkred;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color:darkcyan ;
+        cursor: pointer;
+    }
+
+    
 
 </style>
 
