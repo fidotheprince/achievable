@@ -7,42 +7,98 @@
 </head>
 <body>
 
-    <ul>
-        <li id="showTime">min: 0 sec: 00 </li>
-    </ul>
+          
+    
+   <div id="showTime">min: 0 sec: 00 </div>
+   
 
-    <button id="startButton" onclick="start()">Start</button>
-    <button id="stopButton" onclick="stop()">Stop</button>
-    <button id="saveButton" onclick="save()">Save</button>
-    <br><br>
+   <div class="main-container">
+ 
 
-    <ul id="results"></ul>
+        <ul>
+            <li> 
+                <button id="startButton" onclick="start()">Start</button>
+                <button id="stopButton" onclick="stop()">Stop</button>
+                <button id="saveButton" onclick="save()">Save</button>
+            </li>
+        </ul>
+
+        <ul id="results">
+            <li id="progress"></li>
+            <li id="timeGoal"></li>
+            <li id="status"></li>
+        </ul> 
+   </div>
+   
+ 
+
+   </div>
+    
+
   
-
 </body>
 </html>
 
 <style>
-
-    li {
-        list-style: none;
-        font-size: 20px;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     #showTime {
+        font-size: 80px;
+        /*align*/
+        padding-left: 50px;
+        padding-top: 50px;
+    
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+        background-color: cadetblue;
+    }
+
+    .main-container {
+       /* border: 1px solid red;*/
+        height: 400px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
         list-style: none;
         font-size: 30px;
+        text-align: center;
+    }
+
+    #results {
+        /*border: 1px solid blue;*/
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+
+        flex-wrap: wrap;
+
+        
+        padding-right: 24px;
+        height: 50px;
+        width: 1425px;
+
         font-family: 'Courier New', Courier, monospace;
     }
 
+
     button {
         border: none;
-        background-color: cadetblue;
+        background-color: green;
+        font-size: 15px;
         color: white;
-        padding: 10px;
-        border-radius: 2px;
-  
+        padding: 20px;
+        border-radius: 5px;
+        /*align-items: center;*/
     }
+
 
     #stopButton {
         background-color:crimson;
@@ -54,7 +110,7 @@
     }
 
     button:hover {
-        background-color:darkcyan ;
+        background-color:darkgreen;
         cursor: pointer;
     }
 

@@ -3,8 +3,10 @@ let totalSeconds = 0;
 let totalMinutes = 0;
 let timeValues = [];
 let valArr = [];
-
-
+//time goal value will be dynamic
+let timeGoal = 100;
+//displays goal to user
+document.getElementById("timeGoal").innerHTML = `Goal: ${timeGoal} min`;
 //hide stop & save button on initital page load
 document.getElementById('stopButton').style.display = "none";
 document.getElementById('saveButton').style.display = "none";
@@ -22,14 +24,20 @@ function timer() {
     document.getElementById("showTime").innerHTML = 
     "min: " + totalMinutes + " sec: " + totalSeconds;
 
+    //indicates when you've met goal
+    if (totalMinutes == timeGoal) {
+        document.getElementById("status").innerHTML = "You've met your goal!";
+    }
+
     timeValues.push(totalMinutes);
 
 }
 
 //start timer display stop button, hide save button
 function start() {
+    //1000 milli = 1 sec
+    runningTimer = window.setInterval(timer, 1);
 
-    runningTimer = window.setInterval(timer, 1000);
     document.getElementById('saveButton').style.display = "none";
     document.getElementById('startButton').style.display = "none";
     document.getElementById('stopButton').style.display = "inline";
@@ -49,16 +57,10 @@ function stop(){
 
 
 function save() {
-    let dispVal = timeValues.pop();   
-
-    let li = document.createElement("li");
-    let textNode = document.createTextNode(dispVal);
-    li.appendChild(textNode);
-
-    document.getElementById("results").appendChild(li);
-
-    //have item popped be dynamically be rendered in a td tag
-    //display total time 
+    let timeWorked = timeValues.pop();
+    document.getElementById("progress").innerHTML = `Time worked : ${timeWorked}  min`;
+    let timeLeft = timeGoal - timeWorked;
+    document.getElementById("status").innerHTML = `${timeLeft} more minutes!`;
 }
 
 /* say congradulations you are one step closer to your goal  */
