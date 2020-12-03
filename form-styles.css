@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /*border: 1px solid blue;*/
+    display: flex;
+    justify-content: center;
+    height: 750px;
+    align-items: center;
+}
+
+label {
+    font-size: 27px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form {
+    /*border: 1px solid blue;*/
+    height: 500px;
+    width: 500px;
+
+    /*alignment*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+
+    background-color: #E9F1F2;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#goal-opt {
+    margin-left: 50px;
+    margin-right: 50px;
+
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 20px;
+
+    border-radius: 5px;
+    border: 1px solid cadetblue;
+}
+
+#goal-opt:hover {
+    cursor: pointer;
+}
+
+input[type=submit]{
+    margin-left: 50px;
+    margin-right: 50px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
+    background-color: green;
+    font-size: 15px;
+    color: white;
+
+    border-radius: 5px;
+
+    border: none;
+
+}
+
+input[type=submit]:hover {
+    background-color:darkgreen;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 319px){
+    label {
+        font-size: 18px; 
+    }
+
+    form {
+        margin-bottom: 245px;
+    }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 539px){
+    label {
+        font-size: 22px; 
+    }
+
+    form {
+        margin-bottom: 245px;
+    }
+};
+
+@media only screen and (min-width: 1000px){
+};

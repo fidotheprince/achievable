@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    /*border can be used for layout*/
+    border: 1px solid cadetblue;
+    background-color: cadetblue;
+}
+
+.hud-display {
+     /*border can be used for layout*/
+    border: 1px solid cadetblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 200px;
+
+    padding-top: 80px;
+    background-color: cadetblue;
+    color: #E9F1F2;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#showTime, #timeGoal {
+    /*border: 1px solid red;*/
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+}
+
+
+.main-container {
+    /*border: 1px solid red;*/
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background-color: green;
+    font-size: 20px;
+    color: white;
+    padding: 25px;
+    border-radius: 5px;
+    /*align-items: center;*/
+}
+
+
+#stopButton {
+    background-color:crimson;
+}
+
+#stopButton:hover {
+    background-color:darkred;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:darkgreen;
+    cursor: pointer;
+}
+
+#backButton {
+    background-color: transparent;
+    color: #E9F1F2;
+    padding: 7px;
+}
+
+#backButton:hover {
+    color: #CFE1E2;
+  }
+
+#backButton:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+#sound {
+    display: none;
+}
+
+@media only screen and (max-width: 319px){
+    .hud-display {
+    }
+    #showTime, #timeGoal {
+        padding-bottom: 25px;
+        font-size: 22px;
+    }
+};
+
+@media only screen and (min-width: 320px) and (max-width: 539px){
+    .hud-display {
+        box-shadow: none;
+    }
+    #showTime, #timeGoal {
+        padding-bottom: 25px;
+        font-size: 10px;
+    }
+};
+
+@media only screen and (min-width: 1000px){
+};
