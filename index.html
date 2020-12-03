@@ -1,122 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievable</title>
+	<!--Created by Alvaro Castro Cid-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="form-styles.css" media="screen"/>
+	<title>Achievable</title>
 </head>
 <body>
-
-          
-    
-   <div id="showTime">min: 0 sec: 00 </div>
-   
-
-   <div class="main-container">
- 
-
-        <ul>
-            <li> 
-                <button id="startButton" onclick="start()">Start</button>
-                <button id="stopButton" onclick="stop()">Stop</button>
-                <button id="saveButton" onclick="save()">Save</button>
-            </li>
-        </ul>
-
-        <ul id="results">
-            <li id="progress"></li>
-            <li id="timeGoal"></li>
-            <li id="status"></li>
-        </ul> 
-   </div>
-   
- 
-
-   </div>
-    
-
-  
+	<form action="set-time.php" method="POST">
+		<label for="goal-opt">How long would you like to work?</label>
+		<select id="goal-opt" name="goal">
+		  <option value="1">1 minute</option>
+		  <option value="5">5 minutes</option>
+		  <option value="10">10 minutes</option>
+		  <option value="15">15 minutes</option>
+		  <option value="30">30 minutes</option>
+		  <option value="60">60 minutes</option>
+		  <option value="90">90 minutes</option>
+		  <option value="120">120 minutes</option>
+		</select>
+	  	<input type="submit">
+	</form>
 </body>
 </html>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    #showTime {
-        font-size: 80px;
-        /*align*/
-        padding-left: 50px;
-        padding-top: 50px;
-    
-        font-family: 'Courier New', Courier, monospace;
-        color: white;
-        background-color: cadetblue;
-    }
-
-    .main-container {
-       /* border: 1px solid red;*/
-        height: 400px;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    ul {
-        list-style: none;
-        font-size: 30px;
-        text-align: center;
-    }
-
-    #results {
-        /*border: 1px solid blue;*/
-        display: flex;
-        justify-content: space-evenly;
-        text-align: center;
-
-        flex-wrap: wrap;
-
-        
-        padding-right: 24px;
-        height: 50px;
-        width: 1425px;
-
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-
-    button {
-        border: none;
-        background-color: green;
-        font-size: 15px;
-        color: white;
-        padding: 20px;
-        border-radius: 5px;
-        /*align-items: center;*/
-    }
-
-
-    #stopButton {
-        background-color:crimson;
-    }
-
-    #stopButton:hover {
-        background-color:darkred;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color:darkgreen;
-        cursor: pointer;
-    }
-
-    
-
-</style>
-
-
-<script type="text/javascript" src="logic.js"></script>
