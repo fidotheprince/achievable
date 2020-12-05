@@ -22,7 +22,7 @@ I hope this little tool can help you progress toward realizing your goals.
 # Demo
 
 <p align= "center" id= "demo" > 
-   <!--GIF here-->
+<img src="https://i.gyazo.com/65d72af2c6d7a2ba58f209721181ede0.gif" alt="Image from Gyazo" width=100%/></a>
 </p>
 
 # User Stories 
